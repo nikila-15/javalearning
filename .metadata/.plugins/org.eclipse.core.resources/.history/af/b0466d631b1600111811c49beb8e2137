@@ -1,0 +1,5 @@
+package edu.cca.niki.oms.service;
+
+public class ProductService {
+
+}

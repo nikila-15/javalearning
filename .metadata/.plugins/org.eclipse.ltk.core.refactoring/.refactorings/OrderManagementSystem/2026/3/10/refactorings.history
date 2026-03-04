@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;OrderManagementSystem&apos;&#x0D;&#x0A;- Original project: &apos;OrderManagementSystem&apos;&#x0D;&#x0A;- Original element: &apos;OrderManagementSystem/src/edu.cca.niki.oms.interfaces&apos;" description="Delete element" element1="/src&lt;edu.cca.niki.oms.interfaces" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1772442761667" subPackages="false" version="1.0"/>
+</session>

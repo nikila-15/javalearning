@@ -1,0 +1,27 @@
+package edu.cca.niki.oms;
+
+import edu.cca.niki.oms.models.Product;
+
+public class OrderManagementDemo {
+
+	public static void main(String[] args) {
+		Product p1=new Product();
+		Product p2=new Product();
+		Product p3=new Product();
+		p1.id=100;
+		p1.name="lenova laptop";
+		p1.price=54000.00;
+		p2.id=101;
+		p2.name="dell";
+		p2.price=54000.00;
+		p3.id=101;
+		p3.name="dell";
+		p3.price=54000.00;
+		System.out.printf("%-10s%-20s%-20s\n","Id","name","Price");
+	    System.out.printf("%-10d%-20s%-20.2f\n",p1.id,p1.name,p1.price);
+	    System.out.printf("%-10d%-20s%-20.2f\n",p2.id,p2.name,p2.price);
+	    System.out.printf("%-10d%-20s%-20.2f\n",p3.id,p3.name,p3.price);
+	}
+	
+
+}

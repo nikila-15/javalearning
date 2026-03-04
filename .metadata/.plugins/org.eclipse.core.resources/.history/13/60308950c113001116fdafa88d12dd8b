@@ -1,0 +1,38 @@
+package edu.cca.niki.oms;
+
+import java.util.Scanner;
+
+import edu.cca.niki.oms.models.Product;
+
+public class OrderManagementDemo {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		Product p1=new Product(101,"dell",6543.00);
+		Product p2=new Product(102,"leno",3456.00);
+		Product p3=new Product(103,"bimbu",6547.00);
+		Product p4=new Product(104,"Apple",1234.00);
+		Product p5=new Product(p2);
+		//p1.id=100;
+        Product p6=new Product();
+        
+        System.out.println("Enter Product Id:");
+        p6.setId(scan.nextInt());
+        scan.nextLine();
+        System.out.println("Enter Product Name:");
+        p6.setName(scan.nextLine());
+        System.out.println("Enter Product Price:");
+        p6.setPrice(scan.nextDouble());
+        scan.nextLine();
+		System.out.printf("%-10s%-20s%-20s\n","Id","name","Price");
+		System.out.println(p1);
+	    System.out.println(p2);
+	    System.out.println(p3);
+  	    System.out.println(p4);
+	    System.out.println(p5);
+	    
+	    System.out.println(p6);
+	}
+	
+
+}

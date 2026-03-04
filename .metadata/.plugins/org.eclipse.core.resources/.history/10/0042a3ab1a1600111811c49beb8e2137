@@ -1,0 +1,5 @@
+package edu.cca.niki.oms.repository;
+
+public class ProductRepository {
+
+}

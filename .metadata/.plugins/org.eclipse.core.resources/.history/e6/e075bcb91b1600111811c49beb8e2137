@@ -1,0 +1,5 @@
+package edu.cca.niki.oms.blueprint;
+
+public interface ProductCRUD {
+
+}
