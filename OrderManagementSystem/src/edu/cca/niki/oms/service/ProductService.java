@@ -46,4 +46,34 @@ public class ProductService {
 	   System.out.println("Product "+id+" Created Successfully...");
 			   
    }
+   public void updateProduct() {
+	   System.out.println("Enter Product Id to update:");
+	   Integer id=scan.nextInt();
+	   scan.nextLine();
+	   if(repository.readOne(id)!=null)
+	   System.out.println("Enter upated product Name:");
+	   String name=scan.nextLine();
+	   System.out.println("Enter upated product Price:");
+	   Double price=scan.nextDouble();
+	   scan.nextLine();
+	   Product p=new Product(id,name,price);
+	   if(repository.update(id, p)!=null) {
+	   System.out.println("Product updated successfully...");
+	  
+	   }
+       else
+	   System.out.println("not found...");
+   }
+   public void deleteProduct() {
+	   System.out.println("Enter Product Id to delete:");
+	   Integer id=scan.nextInt();
+	   scan.nextLine();
+	   if(repository.delete(id))
+	   {
+	   System.out.println("Product deleted successfully...");
+	  
+	   }
+       else
+	   System.out.println("not found...");
+}
 }

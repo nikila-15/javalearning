@@ -50,14 +50,25 @@ public class ProductRepository implements ProductCRUD{
 
 	@Override
 	public Product update(Integer id, Product p) {
-		// TODO Auto-generated method stub
-		return null;
+		Product pr=readOne(id);
+		if(pr!=null) {
+			pr.setName(p.getName());
+			pr.setPrice(p.getPrice());
+			}
+		return pr;
 	}
 
 	@Override
 	public Boolean delete(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		/*Boolean isDeleted=false;
+		Product pr=readOne(id);
+		if(pr!=null)
+		{
+			isDeleted=products.remove(pr);
+		}
+		return isDeleted*/
+		return products.remove(readOne(id));
 	}
       
 }

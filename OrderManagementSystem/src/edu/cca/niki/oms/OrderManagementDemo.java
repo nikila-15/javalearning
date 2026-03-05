@@ -27,10 +27,21 @@ public class OrderManagementDemo {
 			System.out.println(products.get(i));
 		}*/
 		ProductService service=new ProductService();
-		service.showAllProducts();
-		service.createProduct();
-		service.showAllProducts();
-		
+		Scanner scan=new Scanner(System.in);
+		int choice=0;
+		while(choice!=6) {
+			System.out.println("1.create 2.ReadAll 3.ReadOne 4.Update 5.Delete 6.Exit Enter:");
+			choice=scan.nextInt();scan.nextLine();
+			switch(choice) {
+			case 1:service.createProduct();break;
+			case 2:service.showAllProducts();break;
+			case 3:service.showOneProduct();break;
+			case 4:service.updateProduct();break;
+			case 5:service.deleteProduct();break;
+		    default:choice=6;
+			}
+		}
+		System.out.println("Program End!");
 	}
 	
 
