@@ -1,5 +1,4 @@
 package edu.cca.niki.oms.models;
-
 public class Product {
 	private Integer id;
 	private String name;//object member

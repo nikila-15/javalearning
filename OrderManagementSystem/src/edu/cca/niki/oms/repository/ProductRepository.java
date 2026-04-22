@@ -3,14 +3,15 @@ package edu.cca.niki.oms.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.cca.niki.oms.blueprint.ProductCRUD;
+import edu.cca.niki.oms.blueprint.GenericCRUD;
+//import edu.cca.niki.oms.blueprint.ProductCRUD;
 import edu.cca.niki.oms.models.Product;
 
-public class ProductRepository implements ProductCRUD{
+public class ProductRepository implements GenericCRUD<Product,Integer>{
     private List<Product> products=null;
 	
 	public ProductRepository() {
-		products=new ArrayList();
+		products=new ArrayList<Product>();
 		products.add(new Product("dell",6543.00));
 		products.add(new Product("leno",3456.00));
 		products.add(new Product("bimbu",6547.00));
@@ -60,7 +61,6 @@ public class ProductRepository implements ProductCRUD{
 
 	@Override
 	public Boolean delete(Integer id) {
-		// TODO Auto-generated method stub
 		/*Boolean isDeleted=false;
 		Product pr=readOne(id);
 		if(pr!=null)
@@ -69,6 +69,11 @@ public class ProductRepository implements ProductCRUD{
 		}
 		return isDeleted*/
 		return products.remove(readOne(id));
+	}
+	@Override
+	public Product update(Integer t1, Integer t2, Integer t3, Integer t4) {
+		// TODO Auto-generated method stub
+		return null;
 	}
       
 }
